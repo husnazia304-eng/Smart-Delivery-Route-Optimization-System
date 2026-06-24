@@ -156,7 +156,7 @@ http://127.0.0.1:5000
 
 ## 👨‍💻 Developer
 
-**Abdullah Zia**
+**HUSNA  ZIA**
 
 Artificial Intelligence Student | Python Developer | AI Enthusiast
 
