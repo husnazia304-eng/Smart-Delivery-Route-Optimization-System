@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Delivery AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🚚 Smart Delivery Route Optimization</h1>
+
+    <form method="POST">
+
+        <label>Start Location</label>
+
+        <select name="start">
+
+            <option>Warehouse</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+            <option>D</option>
+
+        </select>
+
+        <label>Destination</label>
+
+        <select name="goal">
+
+            <option>Goal</option>
+            <option>Q</option>
+            <option>R</option>
+            <option>S</option>
+            <option>T</option>
+            <option>U</option>
+            <option>V</option>
+
+        </select>
+
+        <button type="submit">
+
+            Find Best Route
+
+        </button>
+
+    </form>
+
+    {% if route %}
+
+    <div class="result">
+
+        <h2>Optimized Route</h2>
+
+        <p>{{ route }}</p>
+
+        <h3>Total Cost: {{ total_cost }}</h3>
+
+    </div>
+
+    {% endif %}
+
+    <div class="graph-section">
+
+        <h2>City Delivery Graph</h2>
+
+        <img
+            src="{{ url_for('static', filename='graph.png') }}"
+            alt="Graph Visualization"
+            width="100%"
+        >
+
+    </div>
+
+</div>
+
+</body>
+</html>
